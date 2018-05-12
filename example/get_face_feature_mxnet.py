@@ -49,7 +49,7 @@ if __name__ == "__main__":
     context = mxnet.cpu()
     face_feature_extractor = MobileFaceFeatureExtractor(model_file, epoch, batch_size, context, gpu_id)
 
-    root_path = "../data/LFW-100Pair/Aaron_Peirsol/"
+    root_path = "../data/LFW-Aligned-100Pair/Aaron_Peirsol/"
     file_names = glob(root_path + '*.*')
     count = 0
     face_batch = []
