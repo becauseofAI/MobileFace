@@ -24,7 +24,13 @@ python face2feature.py # get features and lables and save them to txt
 python tSNE_feature_visualization.py # load the txt to visualize face feature in 2D with tSNE
 ```
 ### ConfusionMatrix
-
+I used the ConfusionMatrix to visualize the 256-dimensional feature similarity heatmap of the LFW-Aligned-100Pair: as you can see, the MobileFace has learned to get higher similarity when calculating the same person's different two face photos. Although the performance of the V1 version is not particularly stunning on LFW Dataset, it does not mean that it does not apply to the actual scene.  
+![t-SNE](./tool/ConfusionMatrix/ConfusionMatrix_LFW-100Pair_MobileFace_V1.png "LFW-Aligned-100Pair MobileFace_V1")  
+To get the ConfusionMatrix feature similarity heatmap visualization above as follow:
+```shell
+cd tool/ConfusionMatrix
+python ConfusionMatrix_similarity_visualization.py
+```
 ## Tool
 ### MXNet2Caffe
 
