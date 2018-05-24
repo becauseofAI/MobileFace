@@ -4,7 +4,7 @@ A face recognition solution on mobile device.
 ## Performance
 | Model | Framework | Size | CPU | Target |
 | :---: |  :---: | :---: | :---: | :---: |
-| MobileFace_Identification_V1 | MXNet | 3.40M | 35ms | Actual Scene |
+| MobileFace_Identification_V1 | MXNet | 3.40M | 20ms | Actual Scene |
 
 ## Example
 To get fast face feature embedding with MXNet as follow:
@@ -32,7 +32,17 @@ cd tool/ConfusionMatrix
 python ConfusionMatrix_similarity_visualization.py
 ```
 ## Tool
+### Time
+To get inference time of MXNet model as follow:
+```shell
+cd tool/time
+python inference_time_evaluation_mxnet.py
+```
 ### MXNet2Caffe
+### Merge_bn
+
+## Benchmark
+### LFW
 
 ## TODO
 - [x] MobileFace_Identification
