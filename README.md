@@ -2,10 +2,10 @@
 A face recognition solution on mobile device.
 
 ## Performance
-| Model | Framework | Size | CPU | Target |
-| :---: |  :---: | :---: | :---: | :---: |
-| MobileFace_Identification_V1 | MXNet | 3.40M | 20ms | Actual Scene |
-
+| Model | Framework | Size | CPU | LFW | Target |
+| :---: |  :---: | :---: | :---: | :---: | :---: |
+| MobileFace_Identification_V1 | MXNet | 3.40M | 20ms | - | Actual Scene |
+| MobileFace_Identification_V2 | MXNet | 3.41M | 25ms | 99.65% | Benchmark |
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
@@ -43,6 +43,13 @@ python inference_time_evaluation_mxnet.py
 
 ## Benchmark
 ### LFW
+The LFW test dataset (aligned by [MTCNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html) and cropped to 112x112) can be download from [GoogleDrive](https://drive.google.com/file/d/1XRdCt3xOw7B3saw0xUSzLRub_HI4Jbk3/view) or [BaiduDrive](https://pan.baidu.com/s/1nxmSCch), and then put it (named lfw.bin) in the directory of ```data/LFW-bin```.  
+To get the LFW comparison result as follow:
+```shell
+cd benchmark/LFW
+python lfw_comparison.py
+```
+### MegaFace
 
 ## TODO
 - [x] MobileFace_Identification
@@ -53,11 +60,13 @@ python inference_time_evaluation_mxnet.py
 - [ ] MobileFace_Pose
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN
-- [ ] Benchmark_LFW
+- [x] Benchmark_LFW
+- [ ] Benchmark_MegaFace
 
 ## Others
 Coming Soon!
 
 ## Reference
-[**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
+- [**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
+- [**InsightFace**](https://github.com/deepinsight/insightface "InsightFace")
 
