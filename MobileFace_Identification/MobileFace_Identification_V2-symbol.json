@@ -1,0 +1,3627 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "_minus_scalar", 
+      "name": "_minusscalar0", 
+      "attrs": {"scalar": "127.5"}, 
+      "inputs": [[0, 0, 0]]
+    }, 
+    {
+      "op": "_mul_scalar", 
+      "name": "_mulscalar0", 
+      "attrs": {"scalar": "0.0078125"}, 
+      "inputs": [[1, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1_bias", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv1", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "num_filter": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[2, 0, 0], [3, 0, 0], [4, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "bn1_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn1_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn1_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn1_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "bn1", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0], [8, 0, 1], [9, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar0", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[10, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar0", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[11, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution0_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution0", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[12, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm0", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0], [17, 0, 1], [18, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar1", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[19, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar1", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[20, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution1_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution1", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm1", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[23, 0, 0], [24, 0, 0], [25, 0, 0], [26, 0, 1], [27, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar2", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[28, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar2", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[29, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution2_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution2", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[30, 0, 0], [31, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm2", 
+      "attrs": {
+        "__mirror_stage__": "True", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[32, 0, 0], [33, 0, 0], [34, 0, 0], [35, 0, 1], [36, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution3_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution3", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[37, 0, 0], [38, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm3", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[39, 0, 0], [40, 0, 0], [41, 0, 0], [42, 0, 1], [43, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar3", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[44, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar3", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[45, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution4_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[46, 0, 0], [47, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm4", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[48, 0, 0], [49, 0, 0], [50, 0, 0], [51, 0, 1], [52, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar4", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[53, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar4", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[54, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution5_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution5", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[55, 0, 0], [56, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm5", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[57, 0, 0], [58, 0, 0], [59, 0, 0], [60, 0, 1], [61, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus0", 
+      "attrs": {"__mirror_stage__": "True"}, 
+      "inputs": [[37, 0, 0], [62, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution6_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution6", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[63, 0, 0], [64, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm6", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[65, 0, 0], [66, 0, 0], [67, 0, 0], [68, 0, 1], [69, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar5", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[70, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar5", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[71, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution7_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution7", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[72, 0, 0], [73, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm7", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0], [77, 0, 1], [78, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar6", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[79, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar6", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[80, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution8_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution8", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[81, 0, 0], [82, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm8", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[83, 0, 0], [84, 0, 0], [85, 0, 0], [86, 0, 1], [87, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus1", 
+      "inputs": [[63, 0, 0], [88, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution9_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution9", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[89, 0, 0], [90, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm9", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[91, 0, 0], [92, 0, 0], [93, 0, 0], [94, 0, 1], [95, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar7", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[96, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar7", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[97, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution10_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution10", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[98, 0, 0], [99, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm10", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[100, 0, 0], [101, 0, 0], [102, 0, 0], [103, 0, 1], [104, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar8", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[105, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar8", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[106, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution11_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution11", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[107, 0, 0], [108, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm11", 
+      "attrs": {
+        "__mirror_stage__": "True", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[109, 0, 0], [110, 0, 0], [111, 0, 0], [112, 0, 1], [113, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution12_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution12", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[114, 0, 0], [115, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm12", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[116, 0, 0], [117, 0, 0], [118, 0, 0], [119, 0, 1], [120, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar9", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[121, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar9", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[122, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution13_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution13", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[123, 0, 0], [124, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm13", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[125, 0, 0], [126, 0, 0], [127, 0, 0], [128, 0, 1], [129, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar10", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[130, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar10", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[131, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution14_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution14", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[132, 0, 0], [133, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm14", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[134, 0, 0], [135, 0, 0], [136, 0, 0], [137, 0, 1], [138, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus2", 
+      "attrs": {"__mirror_stage__": "True"}, 
+      "inputs": [[114, 0, 0], [139, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution15_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution15", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[140, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm15", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[142, 0, 0], [143, 0, 0], [144, 0, 0], [145, 0, 1], [146, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar11", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[147, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar11", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[148, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution16_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution16", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[149, 0, 0], [150, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm16", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[151, 0, 0], [152, 0, 0], [153, 0, 0], [154, 0, 1], [155, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar12", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[156, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar12", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[157, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution17_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution17", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[158, 0, 0], [159, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm17", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[160, 0, 0], [161, 0, 0], [162, 0, 0], [163, 0, 1], [164, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus3", 
+      "inputs": [[140, 0, 0], [165, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution18_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution18", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[166, 0, 0], [167, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm18", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[168, 0, 0], [169, 0, 0], [170, 0, 0], [171, 0, 1], [172, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar13", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[173, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar13", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[174, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution19_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution19", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "96", 
+        "num_group": "96", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[175, 0, 0], [176, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm19", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[177, 0, 0], [178, 0, 0], [179, 0, 0], [180, 0, 1], [181, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar14", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[182, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar14", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[183, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution20_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution20", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[184, 0, 0], [185, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm20", 
+      "attrs": {
+        "__mirror_stage__": "True", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[186, 0, 0], [187, 0, 0], [188, 0, 0], [189, 0, 1], [190, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution21_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution21", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[191, 0, 0], [192, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm21", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[193, 0, 0], [194, 0, 0], [195, 0, 0], [196, 0, 1], [197, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar15", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[198, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar15", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[199, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution22_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution22", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[200, 0, 0], [201, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm22", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[202, 0, 0], [203, 0, 0], [204, 0, 0], [205, 0, 1], [206, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar16", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[207, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar16", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[208, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution23_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution23", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[209, 0, 0], [210, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm23", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[211, 0, 0], [212, 0, 0], [213, 0, 0], [214, 0, 1], [215, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus4", 
+      "attrs": {"__mirror_stage__": "True"}, 
+      "inputs": [[191, 0, 0], [216, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution24_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution24", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[217, 0, 0], [218, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm24", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[219, 0, 0], [220, 0, 0], [221, 0, 0], [222, 0, 1], [223, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar17", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[224, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar17", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[225, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution25_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution25", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[226, 0, 0], [227, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm25", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[228, 0, 0], [229, 0, 0], [230, 0, 0], [231, 0, 1], [232, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar18", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[233, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar18", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[234, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution26_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution26", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[235, 0, 0], [236, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm26", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[237, 0, 0], [238, 0, 0], [239, 0, 0], [240, 0, 1], [241, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus5", 
+      "inputs": [[217, 0, 0], [242, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution27_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution27", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[243, 0, 0], [244, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm27", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[245, 0, 0], [246, 0, 0], [247, 0, 0], [248, 0, 1], [249, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar19", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[250, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar19", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[251, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution28_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution28", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[252, 0, 0], [253, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm28", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[254, 0, 0], [255, 0, 0], [256, 0, 0], [257, 0, 1], [258, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar20", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[259, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar20", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[260, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution29_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution29", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[261, 0, 0], [262, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm29", 
+      "attrs": {
+        "__mirror_stage__": "True", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[263, 0, 0], [264, 0, 0], [265, 0, 0], [266, 0, 1], [267, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution30_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution30", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[268, 0, 0], [269, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm30", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[270, 0, 0], [271, 0, 0], [272, 0, 0], [273, 0, 1], [274, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar21", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[275, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar21", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[276, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution31_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution31", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[277, 0, 0], [278, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm31", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[279, 0, 0], [280, 0, 0], [281, 0, 0], [282, 0, 1], [283, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar22", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[284, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar22", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[285, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution32_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution32", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[286, 0, 0], [287, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm32", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[288, 0, 0], [289, 0, 0], [290, 0, 0], [291, 0, 1], [292, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus6", 
+      "attrs": {"__mirror_stage__": "True"}, 
+      "inputs": [[268, 0, 0], [293, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution33_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution33", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[294, 0, 0], [295, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm33", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[296, 0, 0], [297, 0, 0], [298, 0, 0], [299, 0, 1], [300, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar23", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[301, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar23", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[302, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution34_weight", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution34", 
+      "attrs": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[303, 0, 0], [304, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm34", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[305, 0, 0], [306, 0, 0], [307, 0, 0], [308, 0, 1], [309, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar24", 
+      "attrs": {"scalar": "0"}, 
+      "inputs": [[310, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar24", 
+      "attrs": {"scalar": "6"}, 
+      "inputs": [[311, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution35_weight", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution35", 
+      "attrs": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[312, 0, 0], [313, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm35", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[314, 0, 0], [315, 0, 0], [316, 0, 0], [317, 0, 1], [318, 0, 1]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus7", 
+      "inputs": [[294, 0, 0], [319, 0, 0]]
+    }, 
+    {
+      "op": "Flatten", 
+      "name": "flatten0", 
+      "inputs": [[320, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fc5_weight", 
+      "attrs": {
+        "no_bias": "True", 
+        "num_hidden": "256"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fc5", 
+      "attrs": {
+        "no_bias": "True", 
+        "num_hidden": "256"
+      }, 
+      "inputs": [[321, 0, 0], [322, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fc5_bn_gamma", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fc5_bn_beta", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fc5_bn_moving_mean", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fc5_bn_moving_var", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "fc5_bn", 
+      "attrs": {
+        "fix_gamma": "False", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[323, 0, 0], [324, 0, 0], [325, 0, 0], [326, 0, 1], [327, 0, 1]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    3, 
+    4, 
+    6, 
+    7, 
+    8, 
+    9, 
+    13, 
+    15, 
+    16, 
+    17, 
+    18, 
+    22, 
+    24, 
+    25, 
+    26, 
+    27, 
+    31, 
+    33, 
+    34, 
+    35, 
+    36, 
+    38, 
+    40, 
+    41, 
+    42, 
+    43, 
+    47, 
+    49, 
+    50, 
+    51, 
+    52, 
+    56, 
+    58, 
+    59, 
+    60, 
+    61, 
+    64, 
+    66, 
+    67, 
+    68, 
+    69, 
+    73, 
+    75, 
+    76, 
+    77, 
+    78, 
+    82, 
+    84, 
+    85, 
+    86, 
+    87, 
+    90, 
+    92, 
+    93, 
+    94, 
+    95, 
+    99, 
+    101, 
+    102, 
+    103, 
+    104, 
+    108, 
+    110, 
+    111, 
+    112, 
+    113, 
+    115, 
+    117, 
+    118, 
+    119, 
+    120, 
+    124, 
+    126, 
+    127, 
+    128, 
+    129, 
+    133, 
+    135, 
+    136, 
+    137, 
+    138, 
+    141, 
+    143, 
+    144, 
+    145, 
+    146, 
+    150, 
+    152, 
+    153, 
+    154, 
+    155, 
+    159, 
+    161, 
+    162, 
+    163, 
+    164, 
+    167, 
+    169, 
+    170, 
+    171, 
+    172, 
+    176, 
+    178, 
+    179, 
+    180, 
+    181, 
+    185, 
+    187, 
+    188, 
+    189, 
+    190, 
+    192, 
+    194, 
+    195, 
+    196, 
+    197, 
+    201, 
+    203, 
+    204, 
+    205, 
+    206, 
+    210, 
+    212, 
+    213, 
+    214, 
+    215, 
+    218, 
+    220, 
+    221, 
+    222, 
+    223, 
+    227, 
+    229, 
+    230, 
+    231, 
+    232, 
+    236, 
+    238, 
+    239, 
+    240, 
+    241, 
+    244, 
+    246, 
+    247, 
+    248, 
+    249, 
+    253, 
+    255, 
+    256, 
+    257, 
+    258, 
+    262, 
+    264, 
+    265, 
+    266, 
+    267, 
+    269, 
+    271, 
+    272, 
+    273, 
+    274, 
+    278, 
+    280, 
+    281, 
+    282, 
+    283, 
+    287, 
+    289, 
+    290, 
+    291, 
+    292, 
+    295, 
+    297, 
+    298, 
+    299, 
+    300, 
+    304, 
+    306, 
+    307, 
+    308, 
+    309, 
+    313, 
+    315, 
+    316, 
+    317, 
+    318, 
+    322, 
+    324, 
+    325, 
+    326, 
+    327
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    32, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59, 
+    60, 
+    61, 
+    62, 
+    63, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    82, 
+    83, 
+    84, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    95, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    109, 
+    110, 
+    111, 
+    112, 
+    113, 
+    114, 
+    115, 
+    116, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    127, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    141, 
+    142, 
+    143, 
+    144, 
+    145, 
+    146, 
+    147, 
+    150, 
+    151, 
+    152, 
+    153, 
+    154, 
+    155, 
+    156, 
+    157, 
+    158, 
+    161, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    167, 
+    168, 
+    169, 
+    172, 
+    173, 
+    174, 
+    175, 
+    176, 
+    177, 
+    178, 
+    179, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    193, 
+    194, 
+    195, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    204, 
+    205, 
+    206, 
+    207, 
+    208, 
+    209, 
+    210, 
+    211, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    221, 
+    222, 
+    225, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    232, 
+    233, 
+    236, 
+    237, 
+    238, 
+    239, 
+    240, 
+    241, 
+    242, 
+    245, 
+    246, 
+    247, 
+    248, 
+    249, 
+    250, 
+    251, 
+    252, 
+    253, 
+    256, 
+    257, 
+    258, 
+    259, 
+    260, 
+    261, 
+    262, 
+    263, 
+    264, 
+    267, 
+    268, 
+    269, 
+    270, 
+    271, 
+    272, 
+    273, 
+    274, 
+    277, 
+    278, 
+    279, 
+    280, 
+    281, 
+    282, 
+    283, 
+    284, 
+    285, 
+    288, 
+    289, 
+    290, 
+    291, 
+    292, 
+    293, 
+    294, 
+    295, 
+    296, 
+    299, 
+    300, 
+    301, 
+    302, 
+    303, 
+    304, 
+    305, 
+    306, 
+    309, 
+    310, 
+    311, 
+    312, 
+    313, 
+    314, 
+    315, 
+    316, 
+    317, 
+    320, 
+    321, 
+    322, 
+    323, 
+    324, 
+    325, 
+    326, 
+    327, 
+    328, 
+    331, 
+    332, 
+    333, 
+    334, 
+    335, 
+    336, 
+    337, 
+    340, 
+    341, 
+    342, 
+    343, 
+    344, 
+    345, 
+    346, 
+    347, 
+    348, 
+    351, 
+    352, 
+    353, 
+    354, 
+    355, 
+    356, 
+    357, 
+    358, 
+    359, 
+    362, 
+    363, 
+    364, 
+    365, 
+    366, 
+    367, 
+    368, 
+    369, 
+    372, 
+    373, 
+    374, 
+    375, 
+    376, 
+    377, 
+    378, 
+    379, 
+    380, 
+    383, 
+    384, 
+    385, 
+    386, 
+    387, 
+    388, 
+    389, 
+    390, 
+    391, 
+    394, 
+    395, 
+    396, 
+    397, 
+    398, 
+    399, 
+    400, 
+    401, 
+    402, 
+    405
+  ], 
+  "heads": [[328, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10200]}
+}
