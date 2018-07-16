@@ -44,11 +44,12 @@ python inference_time_evaluation_mxnet.py
 ## Benchmark
 ### LFW
 The LFW test dataset (aligned by [MTCNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html) and cropped to 112x112) can be download from [GoogleDrive](https://drive.google.com/file/d/1XRdCt3xOw7B3saw0xUSzLRub_HI4Jbk3/view) or [BaiduDrive](https://pan.baidu.com/s/1nxmSCch), and then put it (named lfw.bin) in the directory of ```data/LFW-bin```.  
-To get the LFW comparison result as follow:
+To get the LFW comparison result and plot the ROC curves as follow:
 ```shell
 cd benchmark/LFW
-python lfw_comparison.py
+python lfw_comparison_and_plot_roc.py
 ```
+![LFW ROC](./benchmark/LFW/LFW_ROC_MobileFace_Identification_V2.png "LFW_ROC_MobileFace_Identification_V2") 
 ### MegaFace
 
 ## TODO
