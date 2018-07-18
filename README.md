@@ -4,8 +4,9 @@ A face recognition solution on mobile device.
 ## Performance
 | Model | Framework | Size | CPU | LFW | Target |
 | :---: |  :---: | :---: | :---: | :---: | :---: |
-| MobileFace_Identification_V1 | MXNet | 3.40M | 20ms | - | Actual Scene |
-| MobileFace_Identification_V2 | MXNet | 3.41M | 25ms | 99.65% | Benchmark |
+| MobileFace_Identification_V1 | MXNet | 3.40M | 8.5ms | - | Actual Scene |
+| MobileFace_Identification_V2 | MXNet | 3.41M | 9ms | 99.653% | Benchmark |
+| :star2:MobileFace_Identification_V3 | MXNet | 2.10M | :boom:3ms(sota) | 95.466%(baseline) | Benchmark |
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
@@ -33,10 +34,16 @@ python ConfusionMatrix_similarity_visualization.py
 ```
 ## Tool
 ### Time
-To get inference time of MXNet model as follow:
+To get inference time of different version's MXNet models as follow:
 ```shell
 cd tool/time
-python inference_time_evaluation_mxnet.py
+python inference_time_evaluation_mxnet.py --symbol_version=V3 # default='V1'
+```
+### Model_Prune
+Prune the MXNet model through deleting the needless layers (such as classify layer and loss layer) and only retaining features layers to decrease the model size for inference as follow:
+```shell
+cd tool/prune
+python model_prune_mxnet.py
 ```
 ### MXNet2Caffe
 ### Merge_bn

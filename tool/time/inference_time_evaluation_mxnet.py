@@ -31,7 +31,8 @@ class InferenceEvaluation(object):
         
         all_time = []
 
-        print 'Start to evaluate...'
+        symbol_name = self.symbol_file.split('/')[-1]
+        print 'Start to evaluate: %s' % (symbol_name)
         for i in xrange(self.iteration):
             time_start = datetime.datetime.now()
 
@@ -49,14 +50,27 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='do inference evaluation')
     # general
-    parser.add_argument('--symbol_file', default='../../MobileFace_Identification/MobileFace_Identification_V1-symbol.json', help='path to symbol file')
+    parser.add_argument('--symbol_version', default='V1', help='select the symbol file version: V1, V2, V3')
     parser.add_argument('--input_shape', default=(1, 1, 100, 100), type=int, help='inpute shape: (N, C, H, W).')
+    # parser.add_argument('--symbol_file', default='../../MobileFace_Identification/MobileFace_Identification_V2-symbol.json', help='path to symbol file')
+    # parser.add_argument('--input_shape', default=(1, 3, 112, 112), type=int, help='inpute shape: (N, C, H, W).')
+    # parser.add_argument('--symbol_file', default='../../MobileFace_Identification/MobileFace_Identification_V3-symbol.json', help='path to symbol file')
+    # parser.add_argument('--input_shape', default=(1, 3, 112, 112), type=int, help='inpute shape: (N, C, H, W).')
     parser.add_argument('--input_name', default='data', type=str, help='input data name')
     parser.add_argument('--iteration', default=100, type=int, help='')
     parser.add_argument('--gpu_id', default=0, type=int, help='gpu id')
     args = parser.parse_args()
 
-    symbol_file = args.symbol_file
+    if args.symbol_version == 'V1':
+        symbol_file = '../../MobileFace_Identification/MobileFace_Identification_V1-symbol.json'
+    elif args.symbol_version == 'V2':
+        symbol_file = '../../MobileFace_Identification/MobileFace_Identification_V2-symbol.json'
+    elif args.symbol_version == 'V3':
+        symbol_file = '../../MobileFace_Identification/MobileFace_Identification_V3-symbol.json'
+    else:
+        print 'Cannot find the inpute version, please check the inpute symbol version file'
+
+    # symbol_file = args.symbol_file
     input_shape = args.input_shape
     input_name = args.input_name
     iteration = args.iteration

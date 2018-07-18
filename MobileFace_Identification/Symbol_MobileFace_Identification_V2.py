@@ -91,7 +91,7 @@ def get_symbol_mobilenet2(in_data, **kwargs):
 
     return fc5_bn
 
-def get_feature_symbol_mobilefacev1():
+def get_feature_symbol_mobileface_v2():
     in_data = mx.symbol.Variable(name='data')
     in_data = in_data-127.5
     in_data = in_data*0.0078125
@@ -99,17 +99,18 @@ def get_feature_symbol_mobilefacev1():
     # feature_net = mx.symbol.L2Normalization(data=fc5)
     return feature_net
 
-def get_model_mobilefacev1():
+def get_model_mobileface_v2():
 	in_data = mx.symbol.Variable(name='data')
 	model = get_symbol_mobilenet2(in_data)
 	shape = {'data': (1, 3, 100, 100)}
+    print mx.viz.print_summary(model, shape = shape)
 	digraph = mx.viz.plot_network(model, shape=shape)
 	digraph.view()
 	model.save('MobileFace_Identification_V2.json')
 
 
 if __name__ == '__main__':
-    # get_feature_symbol_mobilefacev1()
-    get_model_mobilefacev1()
+    # get_feature_symbol_mobileface_v2()
+    get_model_mobileface_v2()
 
 

@@ -42,7 +42,7 @@ class MobileFaceFeatureExtractor(object):
 
 if __name__ == "__main__":
     model_file = '../MobileFace_Identification/MobileFace_Identification_V1'
-    epoch = 118
+    epoch = 0
     gpu_id = 0
     batch_size = 2
     # context = mxnet.gpu(gpu_id)
