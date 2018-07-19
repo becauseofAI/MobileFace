@@ -37,7 +37,7 @@ python ConfusionMatrix_similarity_visualization.py
 To get inference time of different version's MXNet models as follow:
 ```shell
 cd tool/time
-python inference_time_evaluation_mxnet.py --symbol_version=V3 # default='V1'
+python inference_time_evaluation_mxnet.py --symbol_version=V3 # default = V1
 ```
 ### Model_Prune
 Prune the MXNet model through deleting the needless layers (such as classify layer and loss layer) and only retaining features layers to decrease the model size for inference as follow:
