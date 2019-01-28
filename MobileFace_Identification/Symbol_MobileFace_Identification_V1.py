@@ -63,32 +63,32 @@ def Bottleneck(data, in_c, out_c, t, s, use_global_stats):
 
 
 def get_symbol_mobilenet2(in_data, **kwargs):
-	T = 3
-	use_global_stats = False
-	conv1 = mx.sym.Convolution(data=in_data, num_filter=32, kernel=(3,3), stride=(2,2), pad=(1,1), name='conv1')
-	bn1 = mx.sym.BatchNorm(data=conv1, fix_gamma=False, use_global_stats=use_global_stats, name='bn1')
-	relu1 = Relu6(bn1)
+    T = 3
+    use_global_stats = False
+    conv1 = mx.sym.Convolution(data=in_data, num_filter=32, kernel=(3,3), stride=(2,2), pad=(1,1), name='conv1')
+    bn1 = mx.sym.BatchNorm(data=conv1, fix_gamma=False, use_global_stats=use_global_stats, name='bn1')
+    relu1 = Relu6(bn1)
 
-	bottleneck1_0 = Bottleneck(relu1, in_c=32, out_c=32, t=T, s=2, use_global_stats=use_global_stats)
-	bottleneck1_1 = Bottleneck(bottleneck1_0, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
-	bottleneck1_2 = Bottleneck(bottleneck1_1, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck1_0 = Bottleneck(relu1, in_c=32, out_c=32, t=T, s=2, use_global_stats=use_global_stats)
+    bottleneck1_1 = Bottleneck(bottleneck1_0, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck1_2 = Bottleneck(bottleneck1_1, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
 
-	bottleneck2_0 = Bottleneck(bottleneck1_2, in_c=32, out_c=32, t=T, s=2, use_global_stats=use_global_stats)
-	bottleneck2_1 = Bottleneck(bottleneck2_0, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
-	bottleneck2_2 = Bottleneck(bottleneck2_1, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck2_0 = Bottleneck(bottleneck1_2, in_c=32, out_c=32, t=T, s=2, use_global_stats=use_global_stats)
+    bottleneck2_1 = Bottleneck(bottleneck2_0, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck2_2 = Bottleneck(bottleneck2_1, in_c=32, out_c=32, t=T, s=1, use_global_stats=use_global_stats)
 
-	bottleneck3_0 = Bottleneck(bottleneck2_2, in_c=32, out_c=64, t=T, s=2, use_global_stats=use_global_stats)
-	bottleneck3_1 = Bottleneck(bottleneck3_0, in_c=64, out_c=64, t=T, s=1, use_global_stats=use_global_stats)
-	bottleneck3_2 = Bottleneck(bottleneck3_1, in_c=64, out_c=64, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck3_0 = Bottleneck(bottleneck2_2, in_c=32, out_c=64, t=T, s=2, use_global_stats=use_global_stats)
+    bottleneck3_1 = Bottleneck(bottleneck3_0, in_c=64, out_c=64, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck3_2 = Bottleneck(bottleneck3_1, in_c=64, out_c=64, t=T, s=1, use_global_stats=use_global_stats)
 
-	bottleneck4_0 = Bottleneck(bottleneck3_2, in_c=64, out_c=128, t=T, s=2, use_global_stats=use_global_stats)
-	bottleneck4_1 = Bottleneck(bottleneck4_0, in_c=128, out_c=128, t=T, s=1, use_global_stats=use_global_stats)
-	bottleneck4_2 = Bottleneck(bottleneck4_1, in_c=128, out_c=128, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck4_0 = Bottleneck(bottleneck3_2, in_c=64, out_c=128, t=T, s=2, use_global_stats=use_global_stats)
+    bottleneck4_1 = Bottleneck(bottleneck4_0, in_c=128, out_c=128, t=T, s=1, use_global_stats=use_global_stats)
+    bottleneck4_2 = Bottleneck(bottleneck4_1, in_c=128, out_c=128, t=T, s=1, use_global_stats=use_global_stats)
 
-	flatten = mx.sym.Flatten(data=bottleneck4_2)
-	fc5 = mx.sym.FullyConnected(data=flatten, num_hidden=256, no_bias=True, name='fc5')
+    flatten = mx.sym.Flatten(data=bottleneck4_2)
+    fc5 = mx.sym.FullyConnected(data=flatten, num_hidden=256, no_bias=True, name='fc5')
 
-	return fc5
+    return fc5
 
 def get_feature_symbol_mobileface_v1():
     in_data = mx.symbol.Variable(name='data')
@@ -97,18 +97,16 @@ def get_feature_symbol_mobileface_v1():
     return feature_net
 
 def get_model_mobileface_v1():
-	in_data = mx.symbol.Variable(name='data')
-	fc5 = get_symbol_mobilenet2(in_data)
-	model = mx.symbol.L2Normalization(data=fc5)
-	shape = {'data': (1, 1, 100, 100)}
+    in_data = mx.symbol.Variable(name='data')
+    fc5 = get_symbol_mobilenet2(in_data)
+    model = mx.symbol.L2Normalization(data=fc5)
+    shape = {'data': (1, 1, 100, 100)}
     print mx.viz.print_summary(model, shape = shape)
-	digraph = mx.viz.plot_network(model, shape=shape)
-	digraph.view()
-	model.save('MobileFace_Identification_V1.json')
+    digraph = mx.viz.plot_network(model, shape=shape)
+    digraph.view()
+    model.save('MobileFace_Identification_V1.json')
 
 
 if __name__ == '__main__':
     # get_feature_symbol_mobileface_v1()
     get_model_mobileface_v1()
-
-
