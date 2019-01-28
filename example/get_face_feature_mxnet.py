@@ -22,7 +22,7 @@ class MobileFaceFeatureExtractor(object):
         self.batch_size = batch_size
         self.context = context
 
-        network = get_feature_symbol_mobilefacev1() 
+        network = get_feature_symbol_mobileface_v1() 
         self.model = mxnet.mod.Module(symbol = network, context = context)
         self.model.bind(for_training = False, data_shapes=[('data', (self.batch_size, 1, 100, 100))])
         sym, arg_params, aux_params = mxnet.model.load_checkpoint(self.model_file, self.epoch)
