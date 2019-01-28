@@ -50,7 +50,7 @@ python model_prune_mxnet.py
 
 ## Benchmark
 ### LFW
-The LFW test dataset (aligned by [MTCNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html) and cropped to 112x112) can be download from [GoogleDrive](https://drive.google.com/file/d/1XRdCt3xOw7B3saw0xUSzLRub_HI4Jbk3/view) or [BaiduDrive](https://pan.baidu.com/s/1nxmSCch), and then put it (named lfw.bin) in the directory of ```data/LFW-bin```.  
+The LFW test dataset (aligned by [MTCNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html) and cropped to 112x112) can be download from [Dropbox](https://www.dropbox.com/s/wpx6tqjf0y5mf6r/faces_ms1m-refine-v2_112x112.zip?dl=0) or [BaiduDrive](https://pan.baidu.com/s/1S6LJZGdqcZRle1vlcMzHOQ), and then put it (named lfw.bin) in the directory of ```data/LFW-bin```.  
 To get the LFW comparison result and plot the ROC curves as follow:
 ```shell
 cd benchmark/LFW
