@@ -13,10 +13,12 @@ A face recognition solution on mobile device.
 | MobileFace_Identification_V2 | MXNet | 3.41M | 9ms | 99.653% | Benchmark |
 | :star2:MobileFace_Identification_V3 | MXNet | 2.10M | :boom:3ms(sota) | 95.466%(baseline) | Benchmark |
 ### Detection
-![MFDetV1](./example/friends_result.jpg "MobileFace_Detection_V1")  
-| Model | Framework | Size | CPU | - | - |
-| :---: |  :---: | :---: | :---: | :---: | :---: |
-| MobileFace_Detection_V1 | MXNet/GluonCV | 30M | 20ms/50fps | - | - |
+![MFDetV1](./example/friends_result.jpg "MobileFace_Detection_V1") 
+
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Detection_V1 | MXNet/GluonCV | 30M | 20ms/50fps |
+
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
