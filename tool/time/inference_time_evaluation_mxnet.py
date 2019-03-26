@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='do inference evaluation')
     # general
-    parser.add_argument('--symbol_version', default='V1', help='select the symbol file version: V1, V2, V3')
+    parser.add_argument('--symbol_version', help='select the symbol file version: V1, V2, V3')
     parser.add_argument('--input_shape', default=(1, 1, 100, 100), type=int, help='inpute shape: (N, C, H, W).')
     # parser.add_argument('--symbol_file', default='../../MobileFace_Identification/MobileFace_Identification_V2-symbol.json', help='path to symbol file')
     # parser.add_argument('--input_shape', default=(1, 3, 112, 112), type=int, help='inpute shape: (N, C, H, W).')
