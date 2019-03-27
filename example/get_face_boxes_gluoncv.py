@@ -11,7 +11,7 @@ from mxnet.gluon.nn import BatchNorm
 from gluoncv.data.transforms import presets
 from matplotlib import pyplot as plt
 sys.path.append(os.path.abspath(os.path.dirname(__file__)) + os.sep + '../MobileFace_Detection/')
-from mobilefacedet import mobilefacedet_v1
+from mobilefacedetnet import mobilefacedetnet_v1
 
 
 def parse_args():
@@ -38,12 +38,12 @@ if __name__ == '__main__':
 
     image_list = [x.strip() for x in args.images.split(',') if x.strip()]
 
-    net = mobilefacedet_v1(args.model)
+    net = mobilefacedetnet_v1(args.model)
 
     net.set_nms(0.45, 200)
     net.collect_params().reset_ctx(ctx = ctx)
 
-    img_short = 320       
+    img_short = 256     
     for image in image_list:
         ax = None
         x, img = presets.yolo.load_test(image, short=img_short)

@@ -1,9 +1,15 @@
+![MFDetV1](./example/result_landmark_emnme_v1.jpg "MobileFace_Detection_V1") 
 # MobileFace
 A face recognition solution on mobile device.
 
 ## Prerequirements
 - Anaconda (optional but recommend)
 - MXNet and GluonCV ([the easiest way to install](https://gluon-cv.mxnet.io/index.html#installation "Install MXNet and GluonCV"))
+- DLib (may be deprecated in the future)  
+The easiest way to install DLib is through pip.
+```shell
+pip install dlib
+```
 
 ## Performance
 ### Identification
@@ -12,13 +18,16 @@ A face recognition solution on mobile device.
 | MobileFace_Identification_V1 | MXNet | 3.40M | 8.5ms | - | Actual Scene |
 | MobileFace_Identification_V2 | MXNet | 3.41M | 9ms | 99.653% | Benchmark |
 | :star2:MobileFace_Identification_V3 | MXNet | 2.10M | :boom:3ms(sota) | 95.466%(baseline) | Benchmark |
-### Detection
-![MFDetV1](./example/friends_result.jpg "MobileFace_Detection_V1") 
 
+### Detection
 | Model | Framework | Size | CPU |
 | :---: |  :---: | :---: | :---: |
 | MobileFace_Detection_V1 | MXNet/GluonCV | 30M | 20ms/50fps |
 
+### Landmark
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Detection_V1 | DLib | 5.7M | <1ms |
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
@@ -29,6 +38,11 @@ To get fast face detection result with MXNet/GluonCV as follow:
 ```shell
 cd example
 python get_face_boxes_gluoncv.py
+```
+To get fast face landmarks result with dlib as follow:
+```shell
+cd example
+python get_face_landmark_dlib.py
 ```
 
 ## Visualization
@@ -79,7 +93,7 @@ python lfw_comparison_and_plot_roc.py
 ## TODO
 - [x] MobileFace_Identification
 - [x] MobileFace_Detection
-- [ ] MobileFace_Landmark
+- [x] MobileFace_Landmark
 - [ ] MobileFace_Align
 - [ ] MobileFace_Attribute
 - [ ] MobileFace_Pose
