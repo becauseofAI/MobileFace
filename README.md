@@ -27,7 +27,7 @@ pip install dlib
 ### Landmark
 | Model | Framework | Size | CPU |
 | :---: |  :---: | :---: | :---: |
-| MobileFace_Detection_V1 | DLib | 5.7M | <1ms |
+| MobileFace_Landmark_V1 | DLib | 5.7M | <1ms |
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
