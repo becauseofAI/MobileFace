@@ -28,7 +28,6 @@ pip install dlib
 | Model | Framework | Size | CPU |
 | :---: |  :---: | :---: | :---: |
 | MobileFace_Landmark_V1 | DLib | 5.7M | <1ms |
-<<<<<<< HEAD
 
 ### Pose
 | Model | Framework | Size | CPU |
@@ -108,7 +107,7 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Landmark
 - [ ] MobileFace_Align
 - [ ] MobileFace_Attribute
-- [ ] MobileFace_Pose
+- [x] MobileFace_Pose
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN
 - [x] Benchmark_LFW
