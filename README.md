@@ -1,4 +1,4 @@
-![MFDetV1](./example/result_landmark_emnme_v1.jpg "MobileFace_Detection_V1") 
+![MobileFaceV1](./example/result_pose_emnme_v1.jpg "MobileFace_V1_Result") 
 # MobileFace
 A face recognition solution on mobile device.
 
@@ -27,7 +27,12 @@ pip install dlib
 ### Landmark
 | Model | Framework | Size | CPU |
 | :---: |  :---: | :---: | :---: |
-| MobileFace_Detection_V1 | DLib | 5.7M | <1ms |
+| MobileFace_Landmark_V1 | DLib | 5.7M | <1ms |
+
+### Pose
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Pose_V1 | free | <1K | <0.1ms |
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
@@ -43,6 +48,11 @@ To get fast face landmarks result with dlib as follow:
 ```shell
 cd example
 python get_face_landmark_dlib.py
+```
+To get fast face pose result as follow:
+```shell
+cd example
+python get_face_pose.py
 ```
 
 ## Visualization
