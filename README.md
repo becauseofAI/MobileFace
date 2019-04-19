@@ -1,4 +1,4 @@
-![MobileFaceV1](./example/result_pose_emnme_v1.jpg "MobileFace_V1_Result") 
+![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
 # MobileFace
 A face recognition solution on mobile device.
 
@@ -34,6 +34,16 @@ pip install dlib
 | :---: |  :---: | :---: | :---: |
 | MobileFace_Pose_V1 | free | <1K | <0.1ms |
 
+### Align
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Align_V1 | free | <1K | <0.1ms |
+
+### Attribute
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Attribute_V1 | MXNet/GluonCV | 16.4M | 14ms/71fps |
+
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
@@ -54,6 +64,21 @@ To get fast face pose result as follow:
 ```shell
 cd example
 python get_face_pose.py
+```
+To get fast face align result as follow:
+```shell
+cd example
+python get_face_align.py
+```
+To get fast face attribute results as follow:
+```shell
+cd example
+python get_face_attribute_gluoncv.py
+```
+To get mobileface all results as follow:
+```shell
+cd example
+python mobileface_allinone.py
 ```
 
 ## Visualization
@@ -105,8 +130,8 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Identification
 - [x] MobileFace_Detection
 - [x] MobileFace_Landmark
-- [ ] MobileFace_Align
-- [ ] MobileFace_Attribute
+- [x] MobileFace_Align
+- [x] MobileFace_Attribute
 - [x] MobileFace_Pose
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN

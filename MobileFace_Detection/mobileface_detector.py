@@ -1,15 +1,9 @@
 """MobileFaceDetection Demo script based on YOLOV3."""
-# from __future__ import absolute_import
-# from __future__ import division
-import os, sys
-import argparse
-import cv2
+from __future__ import absolute_import
+from __future__ import division
 import time
 import mxnet as mx
-import gluoncv as gcv
-from mxnet.gluon.nn import BatchNorm
 from gluoncv.data.transforms import presets
-from matplotlib import pyplot as plt
 from mobilefacedetnet import mobilefacedetnet_v1
 
 
@@ -59,7 +53,7 @@ class MobileFaceDetection():
         image_dir: str, default=''.
             The path of test images, use comma to split multiple.
         image_mat : Mat 
-            The Mat data format of opencv read the original image.
+            The Mat data format of reading from the original image using opencv.
         Returns
         -------
         type: list

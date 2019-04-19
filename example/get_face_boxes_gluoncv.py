@@ -72,8 +72,8 @@ if __name__ == '__main__':
             cv2.rectangle(im, (xmin, ymin), (xmax, ymax), (0,255,0), 3)
             cv2.putText(im, str('%s%0.2f' % (net.classes[int(ids[i])], scores[i])), 
                        (xmin, ymin - 5), cv2.FONT_HERSHEY_COMPLEX , 0.8, (0,0,255), 2)
-        cv2.imwrite('friends_result.jpg', im)
-        cv2.imshow('friends_result', im)
+        cv2.imwrite('result_detect_v1.jpg', im)
+        cv2.imshow('result_detect', im)
         cv2.waitKey(2000)
 
     # Uncomment for loop test method 1.
