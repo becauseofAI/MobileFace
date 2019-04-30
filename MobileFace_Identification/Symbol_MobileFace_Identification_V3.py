@@ -53,9 +53,8 @@ def ResNet_MobileNet(input_data, units, num_stages, filter_list, group_list, bot
 
 def get_feature_symbol_mobileface_v3():
     in_data = mx.symbol.Variable(name='data')
-    in_data = in_data-127.5
-    in_data = in_data*0.0078125
-
+    # in_data = in_data-127.5
+    # in_data = in_data*0.0078125
     fc5_bn = ResNet_MobileNet(
         input_data=in_data,
         units=[1, 1, 1, 1],
@@ -64,13 +63,13 @@ def get_feature_symbol_mobileface_v3():
         group_list=[32, 32, 32, 64, 128],
         bottle_neck=False,
         workspace=128)
-
-    return fc5_bn
+    feature_net = mx.symbol.L2Normalization(data=fc5_bn)
+    return feature_net
 
 def get_model_mobileface_v3():
     model = get_feature_symbol_mobileface_v3()
-    shape = {'data': (32, 1, 112, 112)}
-    print mx.viz.print_summary(model, shape = shape)
+    shape = {'data': (32, 3, 112, 112)}
+    print(mx.viz.print_summary(model, shape = shape))
     digraph = mx.viz.plot_network(model, shape = shape)
     digraph.view()
     model.save('MobileFace_Identification_V3.json')

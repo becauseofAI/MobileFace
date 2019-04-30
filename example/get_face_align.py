@@ -34,7 +34,8 @@ def parse_args():
 def main():
     args = parse_args() 
     landmark_num = 5 # the version of v1 support 5 or 3 now
-    align_size = (96, 96) # the face image size after alined
+    # align_size = (96, 96) # the face image size after alined
+    align_size = (112, 112) # the face image size after alined
     bboxes_predictor = MobileFaceDetection(args.model_detect, args.gpus)
     landmark_predictor = dlib.shape_predictor(args.model_landmark)
     align_tool = MobileFaceAlign(args.model_align)
@@ -79,7 +80,7 @@ def main():
             align_result = align_tool.get_align(img_mat, align_points, align_size)
             toc = time.time() - tic
             print('Face align time: %fms' % (toc*1000))
-            save_aligned = './align_result/' + str(i) + '.jpg'
+            save_aligned = './align_result_112/' + str(i) + '.jpg'
             cv2.imwrite(save_aligned, align_result[0])
 
 if __name__ == '__main__':

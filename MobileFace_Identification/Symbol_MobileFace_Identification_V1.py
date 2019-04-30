@@ -101,7 +101,7 @@ def get_model_mobileface_v1():
     fc5 = get_symbol_mobilenet2(in_data)
     model = mx.symbol.L2Normalization(data=fc5)
     shape = {'data': (1, 1, 100, 100)}
-    print mx.viz.print_summary(model, shape = shape)
+    print(mx.viz.print_summary(model, shape = shape))
     digraph = mx.viz.plot_network(model, shape=shape)
     digraph.view()
     model.save('MobileFace_Identification_V1.json')

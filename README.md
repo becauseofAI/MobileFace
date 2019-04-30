@@ -48,7 +48,7 @@ pip install dlib
 To get fast face feature embedding with MXNet as follow:
 ```shell
 cd example
-python get_face_feature_mxnet.py
+python get_face_feature_v1_mxnet.py # v1, v2, v3
 ```
 To get fast face detection result with MXNet/GluonCV as follow:
 ```shell
@@ -144,4 +144,3 @@ Coming Soon!
 ## Reference
 - [**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
 - [**InsightFace**](https://github.com/deepinsight/insightface "InsightFace")
-
