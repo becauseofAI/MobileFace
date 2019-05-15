@@ -80,6 +80,12 @@ To get mobileface all results as follow:
 cd example
 python mobileface_allinone.py
 ```
+To get mobileface makeup result as follow:
+```shell
+cd example
+python get_face_makeup_v1.py
+```
+![MobileFaceMakeupV1](./example/makeup_result/girl_comparison.png "MobileFaceMakeup_V1_Result") 
 
 ## Visualization
 ### t-SNE
