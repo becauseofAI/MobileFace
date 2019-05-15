@@ -85,7 +85,7 @@ To get mobileface makeup result as follow:
 cd example
 python get_face_makeup_v1.py
 ```
-![MobileFaceMakeupV1](./example/makeup_result/girl_comparison.png "MobileFaceMakeup_V1_Result") 
+![MobileFaceMakeupV1](./example/makeup_result/girl_comparison.jpg "MobileFaceMakeup_V1_Result") 
 
 ## Visualization
 ### t-SNE
@@ -139,6 +139,7 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Align
 - [x] MobileFace_Attribute
 - [x] MobileFace_Pose
+- [x] MobileFace_Makeup
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN
 - [x] Benchmark_LFW
