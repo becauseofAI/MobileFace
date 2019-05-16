@@ -87,6 +87,13 @@ python get_face_makeup_v1.py
 ```
 ![MobileFaceMakeupV1](./example/makeup_result/girl_comparison.jpg "MobileFaceMakeup_V1_Result") 
 
+To get mobileface enhancement result as follow:
+```shell
+cd example
+python get_face_enhancement_v1.py
+```
+![MobileFaceEnhanceV1](./example/light_result/light_comparison.png "MobileFaceEnhance_V1_Result") 
+
 ## Visualization
 ### t-SNE
 I used the t-SNE algorithm to visualize in two dimensions the 256-dimensional embedding space. Every color corresponds to a different person(but colors are reused): as you can see, the MobileFace has learned to group those pictures quite tightly. (the distances between clusters are meaningless when using the t-SNE algorithm)  
@@ -140,6 +147,8 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Attribute
 - [x] MobileFace_Pose
 - [x] MobileFace_Makeup
+- [x] MobileFace_Enhancement
+- [ ] MobileFace_Swap
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN
 - [x] Benchmark_LFW
