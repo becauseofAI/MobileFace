@@ -1,7 +1,6 @@
 ![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
-<img src = "./example/tracking_result/result_friends2_tracking.gif" style="float: center">
 
-<center>居中渲染</center>
+<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
 
 # MobileFace
 A face recognition solution on mobile device.
@@ -101,7 +100,7 @@ To get mobileface fast tracking result as follow:
 cd example
 python get_face_tracking_v1.py
 ```
-<img src = "./example/tracking_result/result_friends1_tracking.gif" style="float: right">
+<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends1_tracking.gif"/></div>
 
 To get mobileface makeup result as follow:
 ```shell
