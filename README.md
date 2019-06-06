@@ -101,7 +101,6 @@ python get_face_tracking_v1.py
 ```
 <center>
 <img src = "./example/tracking_result/result_friends1_tracking.gif">
-</center>
 
 To get mobileface makeup result as follow:
 ```shell
