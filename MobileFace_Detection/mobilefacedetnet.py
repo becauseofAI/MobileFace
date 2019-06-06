@@ -256,3 +256,38 @@ def mobilefacedetnet_v1(model_path, pretrained_base=False, pretrained=True,
     return get_mfdetv1(
         stages, [256, 128, 64], anchors, strides, classes, model_path,
         pretrained=pretrained, norm_layer=norm_layer, norm_kwargs=norm_kwargs, **kwargs)
+
+def mobilefacedetnet_v2(model_path, pretrained_base=False, pretrained=True,
+                     norm_layer=BatchNorm, norm_kwargs=None, **kwargs):
+    """Mobilefacedet: A YOLO3-like multi-scale with mfdet24 base network for fast face detection.
+    Parameters
+    ----------
+    model_path : str
+        Model weights storing path.
+    pretrained_base : bool or str
+        Boolean value controls whether to load the default pretrained weights for model.
+        String value represents the hashtag for a certain version of pretrained weights.
+    pretrained : bool or str
+        Boolean value controls whether to load the default pretrained weights for model.
+        String value represents the hashtag for a certain version of pretrained weights.
+    norm_layer : object
+        Normalization layer used (default: :class:`mxnet.gluon.nn.BatchNorm`)
+        Can be :class:`mxnet.gluon.nn.BatchNorm` or :class:`mxnet.gluon.contrib.nn.SyncBatchNorm`.
+    norm_kwargs : dict
+        Additional `norm_layer` arguments, for example `num_devices=4`
+        for :class:`mxnet.gluon.contrib.nn.SyncBatchNorm`.
+    Returns
+    -------
+    mxnet.gluon.HybridBlock
+        Fully hybrid mobilefacedet network.
+    """
+    # pretrained_base = False if pretrained else pretrained_base
+    base_net = mfdet24(
+        pretrained=pretrained, norm_layer=norm_layer, norm_kwargs=norm_kwargs, **kwargs)
+    stages = [base_net.features[:9], base_net.features[9:12], base_net.features[12:]]
+    anchors = [[10, 12, 16, 20, 23, 28], [43, 52, 60, 75, 80, 94], [118, 147, 186, 232, 285, 316]]
+    strides = [8, 16, 32]
+    classes =  ('face',)
+    return get_mfdetv1(
+        stages, [256, 128, 64], anchors, strides, classes, model_path,
+        pretrained=pretrained, norm_layer=norm_layer, norm_kwargs=norm_kwargs, **kwargs)

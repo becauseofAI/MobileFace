@@ -11,13 +11,13 @@ from mxnet.gluon.nn import BatchNorm
 from gluoncv.data.transforms import presets
 from matplotlib import pyplot as plt
 sys.path.append(os.path.abspath(os.path.dirname(__file__)) + os.sep + '../MobileFace_Detection/')
-from mobilefacedetnet import mobilefacedetnet_v1
+from mobilefacedetnet import mobilefacedetnet_v2
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Test with YOLO networks.')
     parser.add_argument('--model', type=str, 
-                        default='../MobileFace_Detection/model/mobilefacedet_v1_gluoncv.params',
+                        default='../MobileFace_Detection/model/mobilefacedet_v2_gluoncv.params',
                         help="Pretrained model path.")
     parser.add_argument('--images', type=str, default='./friends.jpg',
                         help='Test images, use comma to split multiple.')
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
     image_list = [x.strip() for x in args.images.split(',') if x.strip()]
 
-    net = mobilefacedetnet_v1(args.model)
+    net = mobilefacedetnet_v2(args.model)
 
     net.set_nms(0.45, 200)
     net.collect_params().reset_ctx(ctx = ctx)
@@ -72,7 +72,7 @@ if __name__ == '__main__':
             cv2.rectangle(im, (xmin, ymin), (xmax, ymax), (0,255,0), 3)
             cv2.putText(im, str('%s%0.2f' % (net.classes[int(ids[i])], scores[i])), 
                        (xmin, ymin - 5), cv2.FONT_HERSHEY_COMPLEX , 0.8, (0,0,255), 2)
-        cv2.imwrite('result_detect_v1.jpg', im)
+        cv2.imwrite('result_detect_v2.jpg', im)
         cv2.imshow('result_detect', im)
         cv2.waitKey(2000)
 

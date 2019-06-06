@@ -1,4 +1,6 @@
 ![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
+![MobileFaceTrackingV1](./example/tracking_result/result_friends2_tracking.gif "MobileFaceTracking_V1_Result") 
+
 # MobileFace
 A face recognition solution on mobile device.
 
@@ -44,42 +46,61 @@ pip install dlib
 | :---: |  :---: | :---: | :---: |
 | MobileFace_Attribute_V1 | MXNet/GluonCV | 16.4M | 14ms/71fps |
 
+### Tracking
+| Model | Framework | Size | CPU |
+| :---: |  :---: | :---: | :---: |
+| MobileFace_Tracking_V1 | free | - | <2ms |
+
 ## Example
 To get fast face feature embedding with MXNet as follow:
 ```shell
 cd example
 python get_face_feature_v1_mxnet.py # v1, v2, v3
 ```
+
 To get fast face detection result with MXNet/GluonCV as follow:
 ```shell
 cd example
 python get_face_boxes_gluoncv.py
 ```
+
 To get fast face landmarks result with dlib as follow:
 ```shell
 cd example
 python get_face_landmark_dlib.py
 ```
+
 To get fast face pose result as follow:
 ```shell
 cd example
 python get_face_pose.py
 ```
+
 To get fast face align result as follow:
 ```shell
 cd example
 python get_face_align.py
 ```
+
 To get fast face attribute results as follow:
 ```shell
 cd example
 python get_face_attribute_gluoncv.py
 ```
+
 To get mobileface all results as follow:
 ```shell
 cd example
 python mobileface_allinone.py
 ```
+
+To get mobileface fast tracking result as follow:
+```shell
+cd example
+python get_face_tracking_v1.py
+```
+![MobileFaceTrackingV1](./example/tracking_result/result_friends1_tracking.gif "MobileFaceTracking_V1_Result") 
+
 To get mobileface makeup result as follow:
 ```shell
 cd example
@@ -146,6 +167,7 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Align
 - [x] MobileFace_Attribute
 - [x] MobileFace_Pose
+- [x] MobileFace_Tracking
 - [x] MobileFace_Makeup
 - [x] MobileFace_Enhancement
 - [ ] MobileFace_Swap
@@ -160,3 +182,4 @@ Coming Soon!
 ## Reference
 - [**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
 - [**InsightFace**](https://github.com/deepinsight/insightface "InsightFace")
+- [**SORT**](https://github.com/abewley/sort "sort")
