@@ -99,7 +99,9 @@ To get mobileface fast tracking result as follow:
 cd example
 python get_face_tracking_v1.py
 ```
-<img src = "./example/tracking_result/result_friends1_tracking.gif" style="float: center">
+<center>
+<img src = "./example/tracking_result/result_friends1_tracking.gif">
+</center>
 
 To get mobileface makeup result as follow:
 ```shell
