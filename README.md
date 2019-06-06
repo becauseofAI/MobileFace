@@ -1,6 +1,6 @@
 ![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
 <img src = "./example/tracking_result/result_friends2_tracking.gif" style="float: center">
-
+<center>居中渲染</center>
 # MobileFace
 A face recognition solution on mobile device.
 
