@@ -171,7 +171,9 @@ python lfw_comparison_and_plot_roc.py
 - [x] MobileFace_Tracking
 - [x] MobileFace_Makeup
 - [x] MobileFace_Enhancement
-- [ ] MobileFace_Swap
+- [ ] MobileFace_FacePortrait
+- [ ] MobileFace_FaceSwap
+- [ ] MobileFace_MakeupSwap
 - [ ] MobileFace_NCNN
 - [ ] MobileFace_FeatherCNN
 - [x] Benchmark_LFW
@@ -179,6 +181,14 @@ python lfw_comparison_and_plot_roc.py
 
 ## Others
 Coming Soon!
+#### FacePortrait
+<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
+
+#### MakeupSwap
+<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
+
+#### FaceSwap
+<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
 
 ## Reference
 - [**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
