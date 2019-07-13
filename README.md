@@ -182,13 +182,13 @@ python lfw_comparison_and_plot_roc.py
 ## Others
 Coming Soon!
 #### FacePortrait
-<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
+<div align="center"><img width="1280" height="auto" src="./MobileFace_ComingSoon/imgs/portrait_all.png"/></div>
 
 #### MakeupSwap
-<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
+<div align="center"><img width="1280" height="auto" src="./MobileFace_ComingSoon/imgs/BeautyGAN.jpg"/></div>
 
 #### FaceSwap
-<div align="center"><img width="1280" height="auto" src="./example/tracking_result/result_friends2_tracking.gif"/></div>
+<div align="center"><img width="1280" height="auto" src="./MobileFace_ComingSoon/imgs/funit.gif"/></div>
 
 ## Reference
 - [**t-SNE**](http://lvdmaaten.github.io/tsne/ "t-SNE")
