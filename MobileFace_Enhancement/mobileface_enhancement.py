@@ -33,7 +33,13 @@ class MobileFaceEnhance():
             The gray histogram for face.
         """
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # method 1
+        # hist = cv2.calcHist([img_gray], [0], None, [256], [0, 256])
+        
+        # method 2
         hist = cv2.calcHist(img_gray, [0], None, [256], [0, 256])
+
         dark_rate = np.sum(hist[:dark_th]) / np.sum(hist)
         normal_rate = np.sum(hist[dark_th:bright_th]) / np.sum(hist)
         bright_rate = np.sum(hist[bright_th:]) / np.sum(hist)

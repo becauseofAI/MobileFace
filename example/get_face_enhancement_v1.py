@@ -40,7 +40,7 @@ def main():
         img_gamma = enhance_tool.gamma_trans(img, gamma)
         if not os.path.exists(args.result_dir):
             os.makedirs(args.result_dir)
-        rst_path = os.path.join(args.result_dir, 'rst_' + img_name)
+        rst_path = os.path.join(args.result_dir, 'rst_debug' + img_name)
         cv2.imwrite(rst_path, img_gamma)
 
         img_stack = np.hstack((img, img_gamma))
