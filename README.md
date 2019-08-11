@@ -1,14 +1,17 @@
-# <center> Big Bang </center>
-**<center> Receptive Field Is All You Need </center>**
-<center> 2K real-time detection is so easy! </center>
+# <p align="center">:boom:**Big Bang**:boom:</p>
 
-<div align="center"><img width="1280" height="auto" src="./example/LFFD/lffd_v2_gpu_result.gif"/></div>
+#### <p align="center">**Receptive Field Is All You Need**</p>
+<p align="center">2K real-time detection is so easy!</p>
 
-<center> [[code]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) [[paper]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) </center>
+<div align="center"><img width="1280" height="auto" src="./example/LFFD/lffd_v2_gpu_result.gif"/></div>  
+
+#### <p align="center">[[code]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) [[paper]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices)</p>
+
 ---
----
-# <center> MobileFace </center>
-<center> A face recognition solution on mobile device.</center>
+
+# <p align="center">**MobileFace**</p>
+
+<p align="center">A face recognition solution on mobile device.</p>
 
 ![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
 
