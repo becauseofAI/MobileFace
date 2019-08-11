@@ -1,8 +1,11 @@
-# Big Bang
+# <p align="center">:boom:**Big Bang**:boom:</p>
 
-**Receptive Field Is All You Need** and **2K real-time detection is so easy!**
+<p align="center">Receptive Field Is All You Need</p>
+<p align="center">2K real-time detection is so easy!</p>
 
 <div align="center"><img width="1280" height="auto" src="./example/LFFD/lffd_v2_gpu_result.gif"/></div>  
+
+<center> [[code]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) [[paper]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) </center>
 
 # MobileFace
 
