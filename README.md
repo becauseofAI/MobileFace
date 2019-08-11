@@ -7,9 +7,11 @@
 
 #### <p align="center">[[code]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices) [[paper]](https://github.com/YonghaoHe/A-Light-and-Fast-Face-Detector-for-Edge-Devices)</p>
 
-# MobileFace
+---
 
-A face recognition solution on mobile device.
+# <p align="center">**MobileFace**</p>
+
+<p align="center">A face recognition solution on mobile device.</p>
 
 ![MobileFaceV1](./example/result_allinone_v1.jpg "MobileFace_V1_Result") 
 
